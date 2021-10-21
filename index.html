@@ -24,52 +24,57 @@
           </span>
           <img src="https://lorempixel.com/185/185/" alt="Foto pessoal" />
         </div>
-        <h1>Gabriel Oliveira</h1>
-        <a href="https://instagram.com/gabrield_o">
+        <h1 id="userName">Gabriel Oliveira</h1>
+        <a target="blank" href="https://github.com/gabrieldanuz">
           <img src="images/github.svg" alt="Icone GitHub" />
           GabrielD_O</a
         >
         <p>Programador Junior</p>
 
-        <ul>
-          <li>
-            <a href="https://youtube.com/gabrieldanuzoliveira">
-              <img
-                src="images/youtube.svg"
-                alt="Icone Youtube"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a target="_blank" href="https://youtube.com/gabrieldanuzoliveira">
+              <img src="images/youtube.svg" alt="Icone Youtube" />
             </a>
           </li>
-          <li>
-            <a href="https://instagram.com/GabrielD_O">
-              <img
-                src="images/instagram.svg"
-                alt="Icone Instagram"
-                target="_blank"
-              />
+          <li class="instagram">
+            <a target="_blank" href="https://instagram.com/GabrielD_O">
+              <img src="images/instagram.svg" alt="Icone Instagram" />
             </a>
           </li>
-          <li>
-            <a href="https://facebook.com/gabrieldanuzoliveira">
-              <img
-                src="images/facebook.svg"
-                alt="Icone Facebook"
-                target="_blank"
-              />
+          <li class="facebook">
+            <a target="_blank" href="https://facebook.com/gabrieldanuzoliveira">
+              <img src="images/facebook.svg" alt="Icone Facebook" />
             </a>
           </li>
-          <li>
-            <a href="https://twitter.com/GabrielD_O">
-              <img
-                src="images/twitter.svg"
-                alt="Icone Twitter"
-                target="_blank"
-              />
+          <li class="twitter">
+            <a target="_blank" href="https://twitter.com/GabrielD_O">
+              <img src="images/twitter.svg" alt="Icone Twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+    <script>
+      const LinksSocialMedia = {
+        github: 'gabrieldanuz',
+        youtube: 'UCsyufYPyj9bpMHgpMtJPCsQ',
+        facebook: 'gabrieldanuz',
+        instagram: 'GabrielD_O',
+        twitter: 'GabrielD_O'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
