@@ -22,14 +22,18 @@
           <span>
             <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          <img src="https://lorempixel.com/185/185/" alt="Foto pessoal" />
+          <img
+            src="https://lorempixel.com/185/185/"
+            alt="Foto pessoal"
+            id="userImage"
+          />
         </div>
         <h1 id="userName">Gabriel Oliveira</h1>
-        <a target="blank" href="https://github.com/gabrieldanuz">
+        <a id="userLink" target="blank" href="https://github.com/gabrieldanuz">
           <img src="images/github.svg" alt="Icone GitHub" />
-          GabrielD_O</a
+          <span id="userLogin">GabrielD_O</span></a
         >
-        <p>Programador Junior</p>
+        <p id="userBio">Programador Junior</p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -55,26 +59,6 @@
         </ul>
       </div>
     </main>
-    <script>
-      const LinksSocialMedia = {
-        github: 'gabrieldanuz',
-        youtube: 'UCsyufYPyj9bpMHgpMtJPCsQ',
-        facebook: 'gabrieldanuz',
-        instagram: 'GabrielD_O',
-        twitter: 'GabrielD_O'
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
